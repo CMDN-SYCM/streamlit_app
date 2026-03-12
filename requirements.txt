@@ -1,9 +1,7 @@
-# 原有依赖全部保留（无需修改）
 Pillow
 numpy
 ultralytics
 streamlit
 altair
-
-# 唯一修改：将 opencv-python 替换为 headless 版本（核心！）
-opencv-python-headless>=4.8.0
+# 改用纯 Python 版 OpenCV（无系统库依赖）
+opencv-python-python3>=4.5.5
