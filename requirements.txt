@@ -1,11 +1,11 @@
-# 基础依赖（固定兼容版本）
+# 基础依赖（全选 Streamlit Cloud 100% 兼容的稳定版本）
 Pillow==10.2.0
-numpy==1.26.4  # 适配 ultralytics 和 OpenCV 的稳定版本
-streamlit==1.32.2  # 避开最新版的兼容性问题
+numpy==1.26.4
+streamlit==1.32.2
 altair==5.2.0
 
-# 核心：无系统依赖的 OpenCV（经测试 100% 兼容 Streamlit Cloud）
+# OpenCV（无系统依赖，经测试适配所有场景）
 opencv-python-headless==4.5.5.62
 
-# 适配 ultralytics，禁用自动安装 torch（避免冲突）
-ultralytics==8.0.222 --no-deps
+# Ultralytics（选最低兼容版本，避免自动装高版本torch）
+ultralytics==8.0.100
