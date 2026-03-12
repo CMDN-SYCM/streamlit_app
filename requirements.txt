@@ -4,6 +4,3 @@ numpy
 ultralytics
 streamlit
 altair
-torch
-torchvision
-torchaudio
