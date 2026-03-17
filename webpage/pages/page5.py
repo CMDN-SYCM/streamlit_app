@@ -9,7 +9,7 @@ from io import BytesIO
 import torch
 from ultralytics.nn.tasks import DetectionModel
 
-# ========== 解决你报错的核心代码 ==========
+# ========== 解决PyTorch 2.6警告的核心代码 ==========
 torch.serialization.add_safe_globals([DetectionModel])
 
 # 配置页面
@@ -82,12 +82,12 @@ st.markdown("""
 # 标题
 st.title("🤖 图片识别")
 
-# 加载训练好的 YOLO 模型
-@st.cache_resource(allow_output_mutation=True, suppress_st_warning=True)
+# 加载训练好的 YOLO 模型（修复核心：去掉错误参数）
+@st.cache_resource(suppress_st_warning=True)  # 只保留支持的参数
 def load_model():
     try:
         with torch.serialization.safe_globals([DetectionModel]):
-            model = YOLO("runs/detect/train/weights/best.pt")
+            model = YOLO("runs/detect/train/weights/best.pt")  # 确认模型路径正确
         return model
     except Exception as e:
         st.error(f"模型加载失败: {e}")
