@@ -7,7 +7,7 @@ altair==5.2.0
 # OpenCV（无系统依赖，经测试适配所有场景）
 # opencv-python-headless==4.5.5.62
 # opencv-python-headless==4.8.1.78
-opencv-python
+opencv-python-headless==4.13.0.92
 
 # Ultralytics（选最低兼容版本，避免自动装高版本torch）
 # ultralytics==8.0.100
