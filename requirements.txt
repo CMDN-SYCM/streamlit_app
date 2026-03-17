@@ -8,6 +8,9 @@ altair==5.2.0
 setuptools==69.5.1
 pip==24.0
 
+# 关键：锁定rich版本，匹配streamlit要求
+rich==13.7.1
+
 # OpenCV（无系统依赖，经测试适配所有场景）
 # opencv-python-headless==4.5.5.62
 # opencv-python-headless==4.8.1.78
