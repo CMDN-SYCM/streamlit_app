@@ -4,9 +4,14 @@ numpy==1.26.4
 streamlit==1.32.2
 altair==5.2.0
 
+# 补充缺失的核心依赖（解决 pkg_resources 问题）
+setuptools==69.5.1
+pip==24.0
+
 # OpenCV（无系统依赖，经测试适配所有场景）
 # opencv-python-headless==4.5.5.62
 opencv-python-headless==4.8.1.78
 
 # Ultralytics（选最低兼容版本，避免自动装高版本torch）
-ultralytics==8.0.100
+# ultralytics==8.0.100
+ultralytics==8.2.28
